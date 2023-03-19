@@ -12,20 +12,34 @@ State::State(sf::RenderWindow* window, std::stack<State*>* states) noexcept
     input::Input::Mouse::init(window);
 }
 
+/**
+ * Updates the current position of the mouse.
+ */
 void State::updateMousePositions() {
     mousePosScreen = input::Input::Mouse::getPosition();
     mousePosWindow = input::Input::Mouse::getRelativePosition();
     mousePosView = input::Input::Mouse::getRelativeCoords();
 }
 
+/**
+ * Ends the current state.
+ */
 void State::endState() {
     end = true;
 }
 
+/**
+ * Gets whether the current state has ended or not.
+ * @return True if the current state has ended, False otherwise.
+ */
 const bool& State::getEnd() const {
     return end;
 }
 
+/**
+ * Delays for a certain amount of milliseconds.
+ * @param milliseconds The amount of time to delay for.
+ */
 void State::delayForMilliSeconds(int milliseconds) {
     if (milliseconds <= 0) {
         logger.error("Cannot delay for 0 or negative milliseconds!", this);

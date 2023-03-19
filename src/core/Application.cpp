@@ -23,6 +23,9 @@ Application::~Application() {
     }
 }
 
+/**
+ * Main game loop.
+ */
 void Application::run() {
     while (window->isOpen()) {
         update();
@@ -30,6 +33,9 @@ void Application::run() {
     }
 }
 
+/**
+ * Main update function. Calls the update functions for the state that is currently playing.
+ */
 void Application::update() {
     updateEvents();
 
@@ -39,7 +45,6 @@ void Application::update() {
 
         // If the current state is over
         if (states.top()->getEnd()) {
-//                states.top()->endState(); // Print state ended message
             delete states.top(); // Free the pointer
             states.pop(); // Remove the state from the stack
         }
@@ -47,6 +52,9 @@ void Application::update() {
         endApplication();
 }
 
+/**
+ * Updates the window events.
+ */
 void Application::updateEvents() {
     while (window->pollEvent(event)) {
         if (event.type == sf::Event::Closed) {
@@ -55,6 +63,9 @@ void Application::updateEvents() {
     }
 }
 
+/**
+ * Main render function. Calls the render function for the state that is currently playing.
+ */
 void Application::render() {
     window->clear();
 
@@ -64,16 +75,25 @@ void Application::render() {
     window->display();
 }
 
+/**
+ * Initializes the game window.
+ */
 void Application::initWindow() {
     logger.info("Window initialized.", this);
     window = new sf::RenderWindow{sf::VideoMode{WINDOW_WIDTH, WINDOW_HEIGHT}, "Minesweeper", sf::Style::Titlebar | sf::Style::Close};
 }
 
+/**
+ * Initializes the first state.
+ */
 void Application::initStates() {
     logger.info("Starting MainMenuState.", this);
     states.push(new MainMenuState{window, &states});
 }
 
+/**
+ * Ends the application.
+ */
 void Application::endApplication() {
     window->close();
     logger.info("Logs written to: '" + logger.getWhereLogged() + "'", this);

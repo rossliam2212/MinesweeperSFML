@@ -22,10 +22,11 @@ public:
 
     void update() override;
     void render(sf::RenderWindow* window) override;
-    void updateButtons();
-    void renderButtons();
 
 private:
+    void updateButtons();
+    void renderButtons(sf::RenderWindow* window);
+
     void initText();
     void initBackground();
     void initFonts();

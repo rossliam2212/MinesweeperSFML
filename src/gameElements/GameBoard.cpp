@@ -59,9 +59,7 @@ GameBoard::GameBoard(int numberOfBombs) noexcept
     placeBombsOnBoard();
 }
 
-void GameBoard::update() {
-
-}
+void GameBoard::update() { }
 
 void GameBoard::render(sf::RenderWindow* window) {
     if (loss) {
@@ -360,22 +358,42 @@ void GameBoard::initPositionsForPiecesOnBoard() {
     positionOfPiecesOnBoard[36] = sf::Vector2f{1250, 1225};
 }
 
+/**
+ * Getter for the number of bombs that are on the board. (The game mode)
+ * @return The number of bombs.
+ */
 int GameBoard::getNumberOfBombs() const {
     return numberOfBombs;
 }
 
+/**
+ * Getter for the number of remaining number of positions on the board to be opened.
+ * @return The number of positions remaining.
+ */
 int GameBoard::getPositionsRemaining() const {
     return positionsRemaining;
 }
 
+/**
+ * Getter for the number of positions opened on the board.
+ * @return The number of positions opened.
+ */
 int GameBoard::getPositionsOpened() const {
     return positionsOpened;
 }
 
+/**
+ *
+ * @return True if the player has won, False otherwise.
+ */
 bool GameBoard::checkIfWon() const {
     return win;
 }
 
+/**
+ *
+ * @return True if the player has lost, False otherwise.
+ */
 bool GameBoard::checkIfLoss() const {
     return loss;
 }

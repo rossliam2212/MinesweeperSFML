@@ -240,14 +240,21 @@ void GameState::render(sf::RenderWindow* window) {
 
     board.render(window);
 
-    // Rendering the buttons.
-    for (auto& btn : buttons)
-        if (btn.second->getShouldDisplay())
-            btn.second->render(window);
+    renderButtons(window);
 
     // Rendering the grid.
     for (const auto& line : grid)
         window->draw(line);
+}
+
+/**
+ * Renders the buttons to the window.
+ * @param window The window to render the buttons on.
+ */
+void GameState::renderButtons(sf::RenderWindow* window) {
+    for (auto& btn : buttons)
+        if (btn.second->getShouldDisplay())
+            btn.second->render(window);
 }
 
 void GameState::handleMove(int position) {
@@ -269,6 +276,9 @@ void GameState::checkGameOver() {
     }
 }
 
+/**
+ * Hides all the buttons to show the positions of all the bombs when the game is over.
+ */
 void GameState::hideAllButtons() {
     for (auto& btn : buttons)
         btn.second->setDisplay(false);

@@ -22,12 +22,19 @@ void MainMenuState::update() {
     updateButtons();
 }
 
+/**
+ * Renders all of the MainMenuState components to the window.
+ * @param window The window to draw on.
+ */
 void MainMenuState::render(sf::RenderWindow* window) {
     window->draw(background);
-    renderButtons();
+    renderButtons(window);
     window->draw(titleText);
 }
 
+/**
+ * Updates each button with the current position of the mouse and checks whether a button is pressed.
+ */
 void MainMenuState::updateButtons() {
     for (auto& btn : buttons)
         btn.second->update(mousePosView);
@@ -45,11 +52,18 @@ void MainMenuState::updateButtons() {
     }
 }
 
-void MainMenuState::renderButtons() {
+/**
+ * Renders the buttons to the window.
+  * @param window The window to render the buttons on.
+ */
+void MainMenuState::renderButtons(sf::RenderWindow* window) {
     for (auto& btn : buttons)
         btn.second->render(window);
 }
 
+/**
+ * Initializes the text.
+ */
 void MainMenuState::initText() {
     titleText.setPosition(100, 200);
     titleText.setFont(font);
@@ -58,11 +72,17 @@ void MainMenuState::initText() {
     titleText.setString("Minesweeper");
 }
 
+/**
+ * Initializes the background.
+ */
 void MainMenuState::initBackground() {
     background.setSize(sf::Vector2f{static_cast<float>(window->getSize().x), static_cast<float>(window->getSize().y)});
     background.setFillColor(sf::Color{40, 40, 40, 255});
 }
 
+/**
+ * Initializes the font.
+ */
 void MainMenuState::initFonts() {
     if (!font.loadFromFile(FONT_PATH)) {
         logger.error("Could not load font from file.", this);
@@ -71,6 +91,9 @@ void MainMenuState::initFonts() {
     logger.info("Loaded font.", this);
 }
 
+/**
+ * Initializes all of the buttons.
+ */
 void MainMenuState::initButtons() {
     buttons["Play"] = new Button {
             100,

@@ -68,7 +68,7 @@ private:
     void updateButtons();
     void hideAllButtons();
 
-    void initGame();
+    void renderButtons(sf::RenderWindow* window);
 
     void initText();
     void initFont();
