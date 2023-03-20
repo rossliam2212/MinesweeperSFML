@@ -6,6 +6,7 @@
 #define MINESWEEPERGUI_MAINMENUSTATE_H
 
 #include "GameState.h"
+#include "HowToPlayMenuState.h"
 
 #include "../../ui/Button.h"
 

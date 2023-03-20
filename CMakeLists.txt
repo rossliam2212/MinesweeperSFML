@@ -12,6 +12,8 @@ set(SOURCE_FILES
         src/core/states/MainMenuState.h
         src/core/states/GameState.cpp
         src/core/states/GameState.h
+        src/core/states/HowToPlayMenuState.cpp
+        src/core/states/HowToPlayMenuState.h
 
         src/core/characters/Player.cpp
         src/core/characters/Player.h

@@ -76,6 +76,12 @@ void MainMenuState::updateButtons() {
         delayForMilliSeconds(500);
     }
 
+    if (buttons["HowToPlay"]->isPressed()) {
+        logger.info("Starting HowToPlayMenuState.", this);
+        states->push(new HowToPlayMenuState{window, states});
+        delayForMilliSeconds(500);
+    }
+
     if (buttons["Quit"]->isPressed()) {
         logger.info("Ending state.", this);
         endState();
@@ -125,19 +131,6 @@ void MainMenuState::initFonts() {
  * Initializes all of the buttons.
  */
 void MainMenuState::initButtons() {
-//    buttons["Play"] = new Button {
-//            100,
-//            350,
-//            250,
-//            75,
-//            &font,
-//            24,
-//            "Play",
-//            sf::Color{0, 0, 0, 255},
-//            sf::Color{50, 50, 50, 255},
-//            sf::Color::White
-//    };
-
     buttons["OneBomb"] = new Button {
             100,
             350,
@@ -216,8 +209,21 @@ void MainMenuState::initButtons() {
             sf::Color::White
     };
 
-    buttons["Quit"] = new Button {
+    buttons["HowToPlay"] = new Button {
             100,
+            1200,
+            250,
+            75,
+            &font,
+            24,
+            "How To Play",
+            sf::Color{0, 0, 0, 255},
+            sf::Color{50, 50, 50, 255},
+            sf::Color::White
+    };
+
+    buttons["Quit"] = new Button {
+            500,
             1200,
             250,
             75,
