@@ -30,7 +30,6 @@ private:
 
     void initText();
     void initBackground();
-//    void initFonts();
     void initButtons();
 };
 

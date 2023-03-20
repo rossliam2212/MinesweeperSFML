@@ -51,14 +51,6 @@ void HowToPlayMenuState::initText() {
     titleText.setString("*How To Play Minesweeper*");
 }
 
-//void HowToPlayMenuState::initFont() {
-//    if (!font.loadFromFile(FONT_PATH)) {
-//        logger.error("Could not load font from file.", this);
-//        return;
-//    }
-//    logger.info("Loaded font.", this);
-//}
-
 void HowToPlayMenuState::initBackground() {
     background.setSize(sf::Vector2f{static_cast<float>(window->getSize().x), static_cast<float>(window->getSize().y)});
     background.setFillColor(sf::Color{40, 40, 40, 255});

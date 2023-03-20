@@ -326,17 +326,6 @@ void GameState::initText() {
     gameOverText.setCharacterSize(50);
 }
 
-///**
-// * Initializes the font.
-// */
-//void GameState::initFont() {
-//    if (!font.loadFromFile(FONT_PATH)) {
-//        logger.error("Could not load font from file.", this);
-//        exit(-1);
-//    }
-//    logger.info("Loaded font.", this);
-//}
-
 /**
  * Initializes the background.
  */

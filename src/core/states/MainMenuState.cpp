@@ -115,17 +115,6 @@ void MainMenuState::initBackground() {
     background.setFillColor(sf::Color{40, 40, 40, 255});
 }
 
-///**
-// * Initializes the font.
-// */
-//void MainMenuState::initFonts() {
-//    if (!font.loadFromFile(FONT_PATH)) {
-//        logger.error("Could not load font from file.", this);
-//        return;
-//    }
-//    logger.info("Loaded font.", this);
-//}
-
 /**
  * Initializes all of the buttons.
  */

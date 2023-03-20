@@ -29,7 +29,6 @@ private:
     void renderButtons(sf::RenderWindow* window);
 
     void initText();
-//    void initFont();
     void initBackground();
     void initButtons();
 };

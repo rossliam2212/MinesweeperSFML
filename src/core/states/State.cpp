@@ -60,5 +60,5 @@ void State::initFont() {
         logger.error("Could not load font from file.", this);
         return;
     }
-    logger.info("Font loaded from: " + FONT_PATH, this);
+    logger.info("Font loaded from: '" + FONT_PATH + "'", this);
 }
