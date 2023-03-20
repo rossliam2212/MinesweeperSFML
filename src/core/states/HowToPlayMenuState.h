@@ -12,7 +12,7 @@
 class HowToPlayMenuState : public State {
 private:
     sf::Text titleText;
-    sf::Font font;
+//    sf::Font font;
     sf::RectangleShape background;
 
     std::map<std::string, Button*> buttons;
@@ -29,7 +29,7 @@ private:
     void renderButtons(sf::RenderWindow* window);
 
     void initText();
-    void initFont();
+//    void initFont();
     void initBackground();
     void initButtons();
 };

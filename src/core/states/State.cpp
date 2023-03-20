@@ -4,12 +4,15 @@
 
 #include "State.h"
 
+const std::string State::FONT_PATH{"../assets/fonts/Pixellari.ttf"};
+
 State::State(sf::RenderWindow* window, std::stack<State*>* states) noexcept
     : window{window},
       states{states},
       end{false},
       logger{"logs"} {
     input::Input::Mouse::init(window);
+    initFont();
 }
 
 /**
@@ -47,4 +50,15 @@ void State::delayForMilliSeconds(int milliseconds) {
     }
     std::chrono::milliseconds mills{std::chrono::milliseconds{milliseconds}};
     std::this_thread::sleep_for(mills);
+}
+
+/**
+ * Initializes the font.
+ */
+void State::initFont() {
+    if (!font.loadFromFile(FONT_PATH)) {
+        logger.error("Could not load font from file.", this);
+        return;
+    }
+    logger.info("Font loaded from: " + FONT_PATH, this);
 }

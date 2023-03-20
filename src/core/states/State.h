@@ -18,11 +18,13 @@
 
 class State {
 protected:
-    static constexpr const char* FONT_PATH{"../assets/fonts/Pixellari.ttf"};
+    static const std::string FONT_PATH;
 
     sf::RenderWindow* window;
     std::stack<State*>* states;
     bool end;
+
+    sf::Font font;
 
     sf::Vector2f mousePosWindow;
     sf::Vector2f mousePosScreen;
@@ -43,6 +45,9 @@ public:
 
 protected:
     void delayForMilliSeconds(int milliseconds);
+
+private:
+    void initFont();
 };
 
 

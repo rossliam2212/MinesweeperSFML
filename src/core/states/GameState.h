@@ -32,7 +32,7 @@ private:
 
     // UI
     sf::Text titleText;
-    sf::Font font;
+//    sf::Font font;
     sf::RectangleShape background;
 
     sf::Text numberOfBombsText;
@@ -62,7 +62,7 @@ private:
     void renderButtons(sf::RenderWindow* window);
 
     void initText();
-    void initFont();
+//    void initFont();
     void initBackground();
     void initButtons();
     void initGrid();

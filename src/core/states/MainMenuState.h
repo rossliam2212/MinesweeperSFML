@@ -14,11 +14,11 @@ class MainMenuState : public State {
 private:
     sf::Text titleText;
     sf::RectangleShape background;
-    sf::Font font;
+//    sf::Font font;
 
     std::map<std::string, Button*> buttons;
 public:
-    MainMenuState(sf::RenderWindow* window, std::stack<State*>* states);
+    MainMenuState(sf::RenderWindow* window, std::stack<State*>* states) noexcept;
     ~MainMenuState() override;
 
     void update() override;
@@ -30,7 +30,7 @@ private:
 
     void initText();
     void initBackground();
-    void initFonts();
+//    void initFonts();
     void initButtons();
 };
 
