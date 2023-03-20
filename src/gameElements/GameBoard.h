@@ -14,10 +14,21 @@
 
 #include "../utilities/logger/Logger.h"
 
+
+enum GameMode {
+    oneBomb,
+    threeBomb,
+    fiveBomb,
+    tenBomb,
+    twentyBomb,
+    thirtyFiveBomb
+};
+
 class GameBoard {
 public:
     static constexpr const int MAX_BOARD_POSITIONS{36};
 private:
+    GameMode mode;
     int numberOfBombs;
     std::vector<int> playerPositions;
     std::vector<int> bombPositions;
@@ -60,13 +71,14 @@ private:
     sf::Sprite eightSprite;
 
 public:
-    GameBoard(int numberOfBombs) noexcept;
+    GameBoard(GameMode gameMode) noexcept;
 
     void update();
     void render(sf::RenderWindow* window);
 
     void handlePlayerMove(int position);
 
+    GameMode getGameMode() const;
     int getNumberOfBombs() const;
     int getPositionsRemaining() const;
     int getPositionsOpened() const;

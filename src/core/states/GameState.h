@@ -10,15 +10,6 @@
 #include "../../gameElements/GameBoard.h"
 #include "../../ui/Button.h"
 
-enum GameMode {
-    oneBomb,
-    threeBomb,
-    fiveBomb,
-    tenBomb,
-    twentyBomb,
-    thirtyFiveBomb
-};
-
 class GameState : public State {
 private:
     // Constants
@@ -37,7 +28,6 @@ private:
 //    Player* player;
 
     GameBoard board;
-    GameMode mode;
     bool gameOver;
 
     // UI

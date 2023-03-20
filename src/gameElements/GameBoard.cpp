@@ -43,8 +43,9 @@ const std::array<std::vector<int>, 36> GameBoard::positionSurroundings {
         std::vector{29, 30, 35},
 };
 
-GameBoard::GameBoard(int numberOfBombs) noexcept
-    : numberOfBombs{numberOfBombs},
+GameBoard::GameBoard(GameMode gameMode) noexcept
+    : mode{gameMode},
+      numberOfBombs{},
       positionsOpened{},
       positionsRemaining{MAX_BOARD_POSITIONS - numberOfBombs},
       loss{false},
@@ -74,7 +75,7 @@ void GameBoard::handlePlayerMove(int position) {
     if (!checkPositionForBomb(position)) {
         int bombsTouchingPosition{calculateNumberOfBombsTouchingPosition(position)};
         playerPositions.emplace_back(position);
-        logger.info("Position " + std::to_string(position) + " clear => " + std::to_string(bombsTouchingPosition) + " bomb(s) touching it.", this);
+        logger.debug("Position " + std::to_string(position) + " clear => " + std::to_string(bombsTouchingPosition) + " bomb(s) touching it.", this);
 
         positionsRemaining--;
         positionsOpened++;
@@ -89,11 +90,16 @@ void GameBoard::handlePlayerMove(int position) {
         }
     } else {
         // Game Over
-        logger.info("Bomb found in position " + std::to_string(position) + ".", this);
+        logger.debug("Bomb found in position " + std::to_string(position) + ".", this);
         loss = true;
     }
 }
 
+/**
+ * Adds the correct sprite to the game board. The sprite that is added depends on the number of bombs that are touching the position.
+ * @param position The position to add the sprite too.
+ * @param numberOfBombsTouching The number of bombs that are touching that position.
+ */
 void GameBoard::addToBoard(int position, int numberOfBombsTouching) {
     sf::Sprite s;
 
@@ -165,6 +171,27 @@ int GameBoard::calculateNumberOfBombsTouchingPosition(int position) {
  * Randomly places all the bombs in positions on the board.
  */
 void GameBoard::placeBombsOnBoard() {
+    switch (mode) {
+        case oneBomb:
+            numberOfBombs = 1;
+            break;
+        case threeBomb:
+            numberOfBombs = 3;
+            break;
+        case fiveBomb:
+            numberOfBombs = 5;
+            break;
+        case tenBomb:
+            numberOfBombs = 10;
+            break;
+        case twentyBomb:
+            numberOfBombs = 20;
+            break;
+        case thirtyFiveBomb:
+            numberOfBombs = 35;
+            break;
+    }
+
     for (int i = 0; i < numberOfBombs; ++i) {
         int randomPosition = getRandomNumber(1, 36);
 
@@ -356,6 +383,14 @@ void GameBoard::initPositionsForPiecesOnBoard() {
     positionOfPiecesOnBoard[34] = sf::Vector2f{860, 1225};
     positionOfPiecesOnBoard[35] = sf::Vector2f{1050, 1225};
     positionOfPiecesOnBoard[36] = sf::Vector2f{1250, 1225};
+}
+
+/**
+ * Getter for the game mode.
+ * @return The game mode.
+ */
+GameMode GameBoard::getGameMode() const {
+    return mode;
 }
 
 /**

@@ -6,10 +6,8 @@
 
 GameState::GameState(sf::RenderWindow* window, std::stack<State*>* states, GameMode gameMode) noexcept
     : State{window, states},
-      board{5},
-      mode{gameMode},
+      board{gameMode},
       gameOver{false} {
-    initGame();
     initFont();
     initText();
     initBackground();
@@ -282,10 +280,6 @@ void GameState::checkGameOver() {
 void GameState::hideAllButtons() {
     for (auto& btn : buttons)
         btn.second->setDisplay(false);
-}
-
-void GameState::initGame() {
-
 }
 
 /**

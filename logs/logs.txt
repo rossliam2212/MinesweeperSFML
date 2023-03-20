@@ -1816,3 +1816,226 @@
 19/03/23  14:25:07  INFO   [Application]  Logs written to: '../logs/logs.txt'
 19/03/23  14:25:07  END    [Application]  Application ended.
 19/03/23  14:25:07  INFO   [Application]  ==================================================================================
+20/03/23  00:05:11  START  [Application]  Application starting.
+20/03/23  00:05:11  INFO   [Application]  Window initialized.
+20/03/23  00:05:11  INFO   [Application]  Starting MainMenuState.
+20/03/23  00:05:11  INFO   [MainMenuState]  Loaded font.
+20/03/23  00:05:13  INFO   [MainMenuState]  Starting GameState.
+20/03/23  00:05:13  INFO   [GameBoard]  Number of bombs on board: 5.
+20/03/23  00:05:13  INFO   [GameBoard]  'bomb' texture loaded.
+20/03/23  00:05:13  INFO   [GameBoard]  '0' texture loaded.
+20/03/23  00:05:13  INFO   [GameBoard]  '1' texture loaded.
+20/03/23  00:05:13  INFO   [GameBoard]  '2' texture loaded.
+20/03/23  00:05:13  INFO   [GameBoard]  '3' texture loaded.
+20/03/23  00:05:13  INFO   [GameBoard]  '4' texture loaded.
+20/03/23  00:05:13  INFO   [GameBoard]  '5' texture loaded.
+20/03/23  00:05:13  INFO   [GameBoard]  '6' texture loaded.
+20/03/23  00:05:13  INFO   [GameBoard]  '7' texture loaded.
+20/03/23  00:05:13  INFO   [GameBoard]  '8' texture loaded.
+20/03/23  00:05:13  INFO   [GameState]  Loaded font.
+20/03/23  00:05:15  INFO   [GameState]  Player opening position 6.
+20/03/23  00:05:15  INFO   [GameBoard]  Position 6 clear => 0 bomb(s) touching it.
+20/03/23  00:05:16  INFO   [GameState]  Player opening position 5.
+20/03/23  00:05:16  INFO   [GameBoard]  Position 5 clear => 0 bomb(s) touching it.
+20/03/23  00:05:16  INFO   [GameState]  Player opening position 11.
+20/03/23  00:05:16  INFO   [GameBoard]  Position 11 clear => 1 bomb(s) touching it.
+20/03/23  00:05:17  INFO   [GameState]  Player opening position 12.
+20/03/23  00:05:17  INFO   [GameBoard]  Position 12 clear => 0 bomb(s) touching it.
+20/03/23  00:05:17  INFO   [GameState]  Player opening position 18.
+20/03/23  00:05:17  INFO   [GameBoard]  Position 18 clear => 0 bomb(s) touching it.
+20/03/23  00:05:18  INFO   [GameState]  Player opening position 17.
+20/03/23  00:05:18  INFO   [GameBoard]  Position 17 clear => 1 bomb(s) touching it.
+20/03/23  00:05:19  INFO   [GameState]  Player opening position 4.
+20/03/23  00:05:19  INFO   [GameBoard]  Position 4 clear => 1 bomb(s) touching it.
+20/03/23  00:05:20  INFO   [GameState]  Player opening position 10.
+20/03/23  00:05:20  INFO   [GameBoard]  Position 10 clear => 2 bomb(s) touching it.
+20/03/23  00:05:21  INFO   [GameState]  Player opening position 24.
+20/03/23  00:05:21  INFO   [GameBoard]  Position 24 clear => 0 bomb(s) touching it.
+20/03/23  00:05:22  INFO   [GameState]  Player opening position 23.
+20/03/23  00:05:22  INFO   [GameBoard]  Position 23 clear => 1 bomb(s) touching it.
+20/03/23  00:05:23  INFO   [GameState]  Player opening position 30.
+20/03/23  00:05:23  INFO   [GameBoard]  Position 30 clear => 1 bomb(s) touching it.
+20/03/23  00:05:23  INFO   [GameState]  Player opening position 29.
+20/03/23  00:05:23  INFO   [GameBoard]  Position 29 clear => 1 bomb(s) touching it.
+20/03/23  00:05:24  INFO   [GameState]  Player opening position 36.
+20/03/23  00:05:24  INFO   [GameBoard]  Position 36 clear => 1 bomb(s) touching it.
+20/03/23  00:05:25  INFO   [GameState]  Player opening position 35.
+20/03/23  00:05:25  INFO   [GameBoard]  Bomb found in position 35.
+20/03/23  00:05:25  INFO   [GameState]  Game over.
+20/03/23  00:05:28  INFO   [Application]  Logs written to: '../logs/logs.txt'
+20/03/23  00:05:28  END    [Application]  Application ended.
+20/03/23  00:05:28  INFO   [Application]  ==================================================================================
+20/03/23  12:30:10  START  [Application]  Application starting.
+20/03/23  12:30:10  INFO   [Application]  Window initialized.
+20/03/23  12:30:10  INFO   [Application]  Starting MainMenuState.
+20/03/23  12:30:10  INFO   [MainMenuState]  Loaded font.
+20/03/23  12:30:11  INFO   [MainMenuState]  Starting GameState.
+20/03/23  12:30:11  INFO   [GameBoard]  Number of bombs on board: 5.
+20/03/23  12:30:11  INFO   [GameBoard]  'bomb' texture loaded.
+20/03/23  12:30:11  INFO   [GameBoard]  '0' texture loaded.
+20/03/23  12:30:11  INFO   [GameBoard]  '1' texture loaded.
+20/03/23  12:30:11  INFO   [GameBoard]  '2' texture loaded.
+20/03/23  12:30:11  INFO   [GameBoard]  '3' texture loaded.
+20/03/23  12:30:11  INFO   [GameBoard]  '4' texture loaded.
+20/03/23  12:30:11  INFO   [GameBoard]  '5' texture loaded.
+20/03/23  12:30:11  INFO   [GameBoard]  '6' texture loaded.
+20/03/23  12:30:11  INFO   [GameBoard]  '7' texture loaded.
+20/03/23  12:30:11  INFO   [GameBoard]  '8' texture loaded.
+20/03/23  12:30:11  INFO   [GameState]  Loaded font.
+20/03/23  12:30:15  INFO   [GameState]  Player opening position 1.
+20/03/23  12:30:15  INFO   [GameBoard]  Position 1 clear => 0 bomb(s) touching it.
+20/03/23  12:30:16  INFO   [GameState]  Player opening position 2.
+20/03/23  12:30:16  INFO   [GameBoard]  Position 2 clear => 0 bomb(s) touching it.
+20/03/23  12:30:17  INFO   [GameState]  Player opening position 8.
+20/03/23  12:30:17  INFO   [GameBoard]  Position 8 clear => 1 bomb(s) touching it.
+20/03/23  12:30:17  INFO   [GameState]  Player opening position 7.
+20/03/23  12:30:17  INFO   [GameBoard]  Position 7 clear => 1 bomb(s) touching it.
+20/03/23  12:30:19  INFO   [GameState]  Player opening position 3.
+20/03/23  12:30:19  INFO   [GameBoard]  Position 3 clear => 0 bomb(s) touching it.
+20/03/23  12:30:19  INFO   [GameState]  Player opening position 9.
+20/03/23  12:30:19  INFO   [GameBoard]  Position 9 clear => 2 bomb(s) touching it.
+20/03/23  12:30:20  INFO   [GameState]  Player opening position 4.
+20/03/23  12:30:20  INFO   [GameBoard]  Position 4 clear => 1 bomb(s) touching it.
+20/03/23  12:30:20  INFO   [GameState]  Player opening position 10.
+20/03/23  12:30:20  INFO   [GameBoard]  Position 10 clear => 2 bomb(s) touching it.
+20/03/23  12:30:21  INFO   [GameState]  Player opening position 5.
+20/03/23  12:30:21  INFO   [GameBoard]  Position 5 clear => 1 bomb(s) touching it.
+20/03/23  12:30:22  INFO   [GameState]  Player opening position 11.
+20/03/23  12:30:22  INFO   [GameBoard]  Bomb found in position 11.
+20/03/23  12:30:22  INFO   [GameState]  Game over.
+20/03/23  12:30:26  INFO   [Application]  Logs written to: '../logs/logs.txt'
+20/03/23  12:30:26  END    [Application]  Application ended.
+20/03/23  12:30:26  INFO   [Application]  ==================================================================================
+20/03/23  12:31:46  START  [Application]  Application starting.
+20/03/23  12:31:46  INFO   [Application]  Window initialized.
+20/03/23  12:31:46  INFO   [Application]  Starting MainMenuState.
+20/03/23  12:31:46  INFO   [MainMenuState]  Loaded font.
+20/03/23  12:31:47  INFO   [MainMenuState]  Starting GameState.
+20/03/23  12:31:47  INFO   [GameBoard]  Number of bombs on board: 5.
+20/03/23  12:31:47  INFO   [GameBoard]  'bomb' texture loaded.
+20/03/23  12:31:47  INFO   [GameBoard]  '0' texture loaded.
+20/03/23  12:31:47  INFO   [GameBoard]  '1' texture loaded.
+20/03/23  12:31:47  INFO   [GameBoard]  '2' texture loaded.
+20/03/23  12:31:47  INFO   [GameBoard]  '3' texture loaded.
+20/03/23  12:31:47  INFO   [GameBoard]  '4' texture loaded.
+20/03/23  12:31:47  INFO   [GameBoard]  '5' texture loaded.
+20/03/23  12:31:47  INFO   [GameBoard]  '6' texture loaded.
+20/03/23  12:31:47  INFO   [GameBoard]  '7' texture loaded.
+20/03/23  12:31:47  INFO   [GameBoard]  '8' texture loaded.
+20/03/23  12:31:47  INFO   [GameState]  Loaded font.
+20/03/23  12:31:49  INFO   [GameState]  Player opening position 1.
+20/03/23  12:31:49  INFO   [GameBoard]  Bomb found in position 1.
+20/03/23  12:31:49  INFO   [GameState]  Game over.
+20/03/23  12:31:51  INFO   [Application]  Logs written to: '../logs/logs.txt'
+20/03/23  12:31:51  END    [Application]  Application ended.
+20/03/23  12:31:51  INFO   [Application]  ==================================================================================
+20/03/23  12:31:52  START  [Application]  Application starting.
+20/03/23  12:31:52  INFO   [Application]  Window initialized.
+20/03/23  12:31:53  INFO   [Application]  Starting MainMenuState.
+20/03/23  12:31:53  INFO   [MainMenuState]  Loaded font.
+20/03/23  12:31:53  INFO   [MainMenuState]  Starting GameState.
+20/03/23  12:31:53  INFO   [GameBoard]  Number of bombs on board: 5.
+20/03/23  12:31:53  INFO   [GameBoard]  'bomb' texture loaded.
+20/03/23  12:31:53  INFO   [GameBoard]  '0' texture loaded.
+20/03/23  12:31:53  INFO   [GameBoard]  '1' texture loaded.
+20/03/23  12:31:53  INFO   [GameBoard]  '2' texture loaded.
+20/03/23  12:31:53  INFO   [GameBoard]  '3' texture loaded.
+20/03/23  12:31:53  INFO   [GameBoard]  '4' texture loaded.
+20/03/23  12:31:53  INFO   [GameBoard]  '5' texture loaded.
+20/03/23  12:31:53  INFO   [GameBoard]  '6' texture loaded.
+20/03/23  12:31:53  INFO   [GameBoard]  '7' texture loaded.
+20/03/23  12:31:53  INFO   [GameBoard]  '8' texture loaded.
+20/03/23  12:31:53  INFO   [GameState]  Loaded font.
+20/03/23  12:31:56  INFO   [GameState]  Player opening position 1.
+20/03/23  12:31:56  DEBUG  [GameBoard]  Position 1 clear => 0 bomb(s) touching it.
+20/03/23  12:32:03  INFO   [GameState]  Player opening position 2.
+20/03/23  12:32:03  DEBUG  [GameBoard]  Position 2 clear => 0 bomb(s) touching it.
+20/03/23  12:32:04  INFO   [GameState]  Player opening position 8.
+20/03/23  12:32:04  DEBUG  [GameBoard]  Position 8 clear => 1 bomb(s) touching it.
+20/03/23  12:32:04  INFO   [GameState]  Player opening position 7.
+20/03/23  12:32:04  DEBUG  [GameBoard]  Position 7 clear => 1 bomb(s) touching it.
+20/03/23  12:32:10  INFO   [GameState]  Player opening position 3.
+20/03/23  12:32:10  DEBUG  [GameBoard]  Position 3 clear => 1 bomb(s) touching it.
+20/03/23  12:32:10  INFO   [GameState]  Player opening position 9.
+20/03/23  12:32:10  DEBUG  [GameBoard]  Position 9 clear => 1 bomb(s) touching it.
+20/03/23  12:32:12  INFO   [GameState]  Player opening position 6.
+20/03/23  12:32:12  DEBUG  [GameBoard]  Position 6 clear => 0 bomb(s) touching it.
+20/03/23  12:32:13  INFO   [GameState]  Player opening position 12.
+20/03/23  12:32:13  DEBUG  [GameBoard]  Position 12 clear => 0 bomb(s) touching it.
+20/03/23  12:32:13  INFO   [GameState]  Player opening position 11.
+20/03/23  12:32:13  DEBUG  [GameBoard]  Position 11 clear => 1 bomb(s) touching it.
+20/03/23  12:32:14  INFO   [GameState]  Player opening position 5.
+20/03/23  12:32:14  DEBUG  [GameBoard]  Position 5 clear => 1 bomb(s) touching it.
+20/03/23  12:32:15  INFO   [GameState]  Player opening position 17.
+20/03/23  12:32:15  DEBUG  [GameBoard]  Position 17 clear => 1 bomb(s) touching it.
+20/03/23  12:32:15  INFO   [GameState]  Player opening position 18.
+20/03/23  12:32:15  DEBUG  [GameBoard]  Position 18 clear => 0 bomb(s) touching it.
+20/03/23  12:32:16  INFO   [GameState]  Player opening position 24.
+20/03/23  12:32:16  DEBUG  [GameBoard]  Position 24 clear => 0 bomb(s) touching it.
+20/03/23  12:32:16  INFO   [GameState]  Player opening position 23.
+20/03/23  12:32:16  DEBUG  [GameBoard]  Position 23 clear => 0 bomb(s) touching it.
+20/03/23  12:32:16  INFO   [GameState]  Player opening position 30.
+20/03/23  12:32:16  DEBUG  [GameBoard]  Position 30 clear => 0 bomb(s) touching it.
+20/03/23  12:32:17  INFO   [GameState]  Player opening position 29.
+20/03/23  12:32:17  DEBUG  [GameBoard]  Position 29 clear => 1 bomb(s) touching it.
+20/03/23  12:32:17  INFO   [GameState]  Player opening position 36.
+20/03/23  12:32:17  DEBUG  [GameBoard]  Position 36 clear => 0 bomb(s) touching it.
+20/03/23  12:32:17  INFO   [GameState]  Player opening position 35.
+20/03/23  12:32:17  DEBUG  [GameBoard]  Position 35 clear => 1 bomb(s) touching it.
+20/03/23  12:32:19  INFO   [GameState]  Player opening position 22.
+20/03/23  12:32:19  DEBUG  [GameBoard]  Position 22 clear => 0 bomb(s) touching it.
+20/03/23  12:32:20  INFO   [GameState]  Player opening position 16.
+20/03/23  12:32:20  DEBUG  [GameBoard]  Position 16 clear => 1 bomb(s) touching it.
+20/03/23  12:32:21  INFO   [GameState]  Player opening position 28.
+20/03/23  12:32:21  DEBUG  [GameBoard]  Position 28 clear => 1 bomb(s) touching it.
+20/03/23  12:32:23  INFO   [GameState]  Player opening position 21.
+20/03/23  12:32:23  DEBUG  [GameBoard]  Position 21 clear => 1 bomb(s) touching it.
+20/03/23  12:32:23  INFO   [GameState]  Player opening position 15.
+20/03/23  12:32:23  DEBUG  [GameBoard]  Position 15 clear => 1 bomb(s) touching it.
+20/03/23  12:32:24  INFO   [GameState]  Player opening position 27.
+20/03/23  12:32:24  DEBUG  [GameBoard]  Position 27 clear => 2 bomb(s) touching it.
+20/03/23  12:32:25  INFO   [GameState]  Player opening position 34.
+20/03/23  12:32:25  INFO   [GameBoard]  Bomb found in position 34.
+20/03/23  12:32:25  INFO   [GameState]  Game over.
+20/03/23  12:32:36  INFO   [Application]  Logs written to: '../logs/logs.txt'
+20/03/23  12:32:36  END    [Application]  Application ended.
+20/03/23  12:32:36  INFO   [Application]  ==================================================================================
+20/03/23  12:38:45  START  [Application]  Application starting.
+20/03/23  12:38:45  INFO   [Application]  Window initialized.
+20/03/23  12:38:45  INFO   [Application]  Starting MainMenuState.
+20/03/23  12:38:45  INFO   [MainMenuState]  Loaded font.
+20/03/23  12:38:53  INFO   [Application]  Logs written to: '../logs/logs.txt'
+20/03/23  12:38:53  END    [Application]  Application ended.
+20/03/23  12:38:53  INFO   [Application]  ==================================================================================
+20/03/23  12:39:03  START  [Application]  Application starting.
+20/03/23  12:39:03  INFO   [Application]  Window initialized.
+20/03/23  12:39:03  INFO   [Application]  Starting MainMenuState.
+20/03/23  12:39:03  INFO   [MainMenuState]  Loaded font.
+20/03/23  12:39:06  INFO   [MainMenuState]  Ending state.
+20/03/23  12:39:06  INFO   [Application]  Logs written to: '../logs/logs.txt'
+20/03/23  12:39:06  END    [Application]  Application ended.
+20/03/23  12:39:06  INFO   [Application]  ==================================================================================
+20/03/23  12:39:51  START  [Application]  Application starting.
+20/03/23  12:39:51  INFO   [Application]  Window initialized.
+20/03/23  12:39:51  INFO   [Application]  Starting MainMenuState.
+20/03/23  12:39:51  INFO   [MainMenuState]  Loaded font.
+20/03/23  12:39:58  INFO   [MainMenuState]  Ending state.
+20/03/23  12:39:58  INFO   [Application]  Logs written to: '../logs/logs.txt'
+20/03/23  12:39:58  END    [Application]  Application ended.
+20/03/23  12:39:58  INFO   [Application]  ==================================================================================
+20/03/23  12:40:10  START  [Application]  Application starting.
+20/03/23  12:40:10  INFO   [Application]  Window initialized.
+20/03/23  12:40:10  INFO   [Application]  Starting MainMenuState.
+20/03/23  12:40:10  INFO   [MainMenuState]  Loaded font.
+20/03/23  12:40:13  INFO   [MainMenuState]  Ending state.
+20/03/23  12:40:13  INFO   [Application]  Logs written to: '../logs/logs.txt'
+20/03/23  12:40:13  END    [Application]  Application ended.
+20/03/23  12:40:13  INFO   [Application]  ==================================================================================
+20/03/23  12:41:12  START  [Application]  Application starting.
+20/03/23  12:41:12  INFO   [Application]  Window initialized.
+20/03/23  12:41:13  INFO   [Application]  Starting MainMenuState.
+20/03/23  12:41:13  INFO   [MainMenuState]  Loaded font.
+20/03/23  12:42:13  INFO   [MainMenuState]  Ending state.
+20/03/23  12:42:13  INFO   [Application]  Logs written to: '../logs/logs.txt'
+20/03/23  12:42:13  END    [Application]  Application ended.
+20/03/23  12:42:13  INFO   [Application]  ==================================================================================
