@@ -265,11 +265,14 @@ void GameState::checkGameOver() {
     if (board.checkIfLoss()) {
         gameOver = true;
 
-        logger.info("Game over.", this);
+        logger.info("Game over, Player loses.", this);
         hideAllButtons();
         // Display Loss UI
     } else if (board.checkIfWon()) {
         gameOver = true;
+
+        logger.info("Game over, Player wins.", this);
+        hideAllButtons();
         // Display Win UI
     }
 }

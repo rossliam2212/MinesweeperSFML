@@ -51,8 +51,6 @@ GameBoard::GameBoard(GameMode gameMode) noexcept
       loss{false},
       win{false},
       logger{"logs"} {
-    logger.info("Number of bombs on board: " + std::to_string(numberOfBombs) + ".", this);
-
     initTextures();
     initSprites();
     initPositionsForPiecesOnBoard();
@@ -191,6 +189,8 @@ void GameBoard::placeBombsOnBoard() {
             numberOfBombs = 35;
             break;
     }
+
+    logger.info("Number of bombs on board: " + std::to_string(numberOfBombs) + ".", this);
 
     for (int i = 0; i < numberOfBombs; ++i) {
         int randomPosition = getRandomNumber(1, 36);

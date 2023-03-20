@@ -41,36 +41,36 @@ void MainMenuState::updateButtons() {
 
     // TODO have buttons for each of the game modes
     if (buttons["OneBomb"]->isPressed()) {
-        logger.info("Starting GameState.", this);
+        logger.info("Starting GameState. GameMode: 1 bomb.", this);
         states->push(new GameState{window, states, oneBomb});
         delayForMilliSeconds(500);
     }
 
-    if (buttons["threeBombs"]->isPressed()) {
-        logger.info("Starting GameState.", this);
+    if (buttons["ThreeBombs"]->isPressed()) {
+        logger.info("Starting GameState. GameMode: 3 bombs.", this);
         states->push(new GameState{window, states, threeBomb});
         delayForMilliSeconds(500);
     }
 
-    if (buttons["fiveBombs"]->isPressed()) {
+    if (buttons["FiveBombs"]->isPressed()) {
         logger.info("Starting GameState.", this);
         states->push(new GameState{window, states, fiveBomb});
         delayForMilliSeconds(500);
     }
 
-    if (buttons["tenBombs"]->isPressed()) {
+    if (buttons["TenBombs"]->isPressed()) {
         logger.info("Starting GameState.", this);
         states->push(new GameState{window, states, tenBomb});
         delayForMilliSeconds(500);
     }
 
-    if (buttons["twentyBombs"]->isPressed()) {
+    if (buttons["TwentyBombs"]->isPressed()) {
         logger.info("Starting GameState.", this);
         states->push(new GameState{window, states, twentyBomb});
         delayForMilliSeconds(500);
     }
 
-    if (buttons["thirtyFiveBombs"]->isPressed()) {
+    if (buttons["ThirtyFiveBombs"]->isPressed()) {
         logger.info("Starting GameState.", this);
         states->push(new GameState{window, states, thirtyFiveBomb});
         delayForMilliSeconds(500);
@@ -164,7 +164,7 @@ void MainMenuState::initButtons() {
             sf::Color::White
     };
 
-    buttons["fiveBombs"] = new Button {
+    buttons["FiveBombs"] = new Button {
             100,
             650,
             250,
@@ -177,7 +177,7 @@ void MainMenuState::initButtons() {
             sf::Color::White
     };
 
-    buttons["tenBombs"] = new Button {
+    buttons["TenBombs"] = new Button {
             500,
             350,
             250,
@@ -190,7 +190,7 @@ void MainMenuState::initButtons() {
             sf::Color::White
     };
 
-    buttons["twentyBombs"] = new Button {
+    buttons["TwentyBombs"] = new Button {
             500,
             500,
             250,
@@ -203,7 +203,7 @@ void MainMenuState::initButtons() {
             sf::Color::White
     };
 
-    buttons["thirtyFiveBombs"] = new Button {
+    buttons["ThirtyFiveBombs"] = new Button {
             500,
             650,
             250,
@@ -217,7 +217,7 @@ void MainMenuState::initButtons() {
     };
 
     buttons["Quit"] = new Button {
-            400,
+            100,
             1200,
             250,
             75,
