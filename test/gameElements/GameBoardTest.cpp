@@ -4,9 +4,15 @@
 
 #include <catch2/catch_test_macros.hpp>
 
-#include "../../src/core/states/GameState.h"
+//#include "../../src/core/states/GameState.h"
 #include "../../src/gameElements/GameBoard.h"
 
+
+TEST_CASE("GameBoard::handlePlayerMove(int position)") {
+}
+
+TEST_CASE("GameBoard::checkPositionForBomb(int position)") {
+}
 
 TEST_CASE("GameBoard::getGameMode() const") {
     GameBoard board{fiveBomb};
@@ -40,30 +46,55 @@ TEST_CASE("GameBoard::getNumberOfBombs() const") {
 }
 
 TEST_CASE("GameBoard::getPositionsRemaining() const") {
+    // GameMode = oneBomb
     GameBoard board1{oneBomb};
-    int positionsRemaining{36 - 1};
+    int positionsRemaining{GameBoard::MAX_BOARD_POSITIONS - 1};
     REQUIRE(board1.getPositionsRemaining() == positionsRemaining);
 
+    // GameMode = threeBomb
     GameBoard board2{threeBomb};
-    positionsRemaining = 36 - 3;
+    positionsRemaining = GameBoard::MAX_BOARD_POSITIONS - 3;
     REQUIRE(board2.getPositionsRemaining() == positionsRemaining);
 
+    // GameMode = fiveBomb
     GameBoard board3{fiveBomb};
-    positionsRemaining = 36 - 5;
+    positionsRemaining = GameBoard::MAX_BOARD_POSITIONS - 5;
     REQUIRE(board3.getPositionsRemaining() == positionsRemaining);
 
+    // GameMode = tenBomb
     GameBoard board4{tenBomb};
-    positionsRemaining = 36 - 10;
+    positionsRemaining = GameBoard::MAX_BOARD_POSITIONS - 10;
     REQUIRE(board4.getPositionsRemaining() == positionsRemaining);
 
+    // GameMode = twentyBomb
     GameBoard board5{twentyBomb};
-    positionsRemaining = 36 - 20;
+    positionsRemaining = GameBoard::MAX_BOARD_POSITIONS - 20;
     REQUIRE(board5.getPositionsRemaining() == positionsRemaining);
 
+    // GameMode = thirtyFiveBomb
     GameBoard board6{thirtyFiveBomb};
-    positionsRemaining = 36 - 35;
+    positionsRemaining = GameBoard::MAX_BOARD_POSITIONS - 35;
     REQUIRE(board6.getPositionsRemaining() == positionsRemaining);
+
+
+    // GameMode = onebomb
+    // One position opened
+    board1.handlePlayerMove(1);
+    positionsRemaining = GameBoard::MAX_BOARD_POSITIONS - 2;
+    REQUIRE(board1.getPositionsRemaining() == positionsRemaining);
 }
 
 TEST_CASE("GameBoard::getPositionsOpened() const") {
+    GameBoard board{oneBomb};
+
+    // Zero positions opened
+    REQUIRE(board.getPositionsOpened() == 0);
+
+    // One position opened
+    board.handlePlayerMove(5);
+    REQUIRE(board.getPositionsOpened() == 1);
+
+    // Two positions opened
+    board.handlePlayerMove(10);
+    REQUIRE(board.getPositionsOpened() == 2);
 }

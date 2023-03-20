@@ -85,6 +85,8 @@ public:
     bool checkIfWon() const;
     bool checkIfLoss() const;
 
+    std::vector<int> getBombPositions();
+
 private:
     bool checkPositionForBomb(int position);
     int calculateNumberOfBombsTouchingPosition(int position);

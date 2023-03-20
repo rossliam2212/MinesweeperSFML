@@ -82,7 +82,7 @@ void GameBoard::handlePlayerMove(int position) {
         addToBoard(position, bombsTouchingPosition);
 
         // Checking if the player has won
-        if (positionsOpened == (36 - numberOfBombs)) {
+        if (positionsOpened == (MAX_BOARD_POSITIONS - numberOfBombs)) {
             // Handle win
             win = true;
         }
@@ -432,4 +432,12 @@ bool GameBoard::checkIfWon() const {
  */
 bool GameBoard::checkIfLoss() const {
     return loss;
+}
+
+/**
+ * Getter for the positions of the bombs on the board.
+ * @return The positions of the bombs on the board.
+ */
+std::vector<int> GameBoard::getBombPositions() {
+    return bombPositions;
 }
