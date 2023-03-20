@@ -41,27 +41,27 @@ TEST_CASE("GameBoard::getNumberOfBombs() const") {
 
 TEST_CASE("GameBoard::getPositionsRemaining() const") {
     GameBoard board1{oneBomb};
-    int positionsRemaining{GameBoard::MAX_BOARD_POSITIONS - 1};
+    int positionsRemaining{36 - 1};
     REQUIRE(board1.getPositionsRemaining() == positionsRemaining);
 
     GameBoard board2{threeBomb};
-    positionsRemaining = GameBoard::MAX_BOARD_POSITIONS - 3;
+    positionsRemaining = 36 - 3;
     REQUIRE(board2.getPositionsRemaining() == positionsRemaining);
 
     GameBoard board3{fiveBomb};
-    positionsRemaining = GameBoard::MAX_BOARD_POSITIONS - 5;
+    positionsRemaining = 36 - 5;
     REQUIRE(board3.getPositionsRemaining() == positionsRemaining);
 
     GameBoard board4{tenBomb};
-    positionsRemaining = GameBoard::MAX_BOARD_POSITIONS - 10;
+    positionsRemaining = 36 - 10;
     REQUIRE(board4.getPositionsRemaining() == positionsRemaining);
 
     GameBoard board5{twentyBomb};
-    positionsRemaining = GameBoard::MAX_BOARD_POSITIONS - 20;
+    positionsRemaining = 36 - 20;
     REQUIRE(board5.getPositionsRemaining() == positionsRemaining);
 
     GameBoard board6{thirtyFiveBomb};
-    positionsRemaining = GameBoard::MAX_BOARD_POSITIONS - 35;
+    positionsRemaining = 36 - 35;
     REQUIRE(board6.getPositionsRemaining() == positionsRemaining);
 }
 
