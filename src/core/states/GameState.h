@@ -38,6 +38,7 @@ private:
     sf::Text numberOfBombsText;
     sf::Text positionsOpenedText;
     sf::Text positionRemainingText;
+    sf::Text gameOverText;
 
     std::array<sf::RectangleShape, 10> grid;
     std::map<std::string, Button*> buttons;

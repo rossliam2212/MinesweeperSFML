@@ -236,6 +236,9 @@ void GameState::render(sf::RenderWindow* window) {
     window->draw(positionsOpenedText);
     window->draw(positionRemainingText);
 
+    if (gameOver)
+        window->draw(gameOverText);
+
     board.render(window);
 
     renderButtons(window);
@@ -268,12 +271,18 @@ void GameState::checkGameOver() {
         logger.info("Game over, Player loses.", this);
         hideAllButtons();
         // Display Loss UI
+        gameOverText.setFillColor(sf::Color::Red);
+        gameOverText.setString("Hard Luck, You Lose!");
+
     } else if (board.checkIfWon()) {
         gameOver = true;
 
         logger.info("Game over, Player wins.", this);
         hideAllButtons();
+
         // Display Win UI
+        gameOverText.setFillColor(sf::Color::Green);
+        gameOverText.setString("Congrats, You Win!!");
     }
 }
 
@@ -289,29 +298,33 @@ void GameState::hideAllButtons() {
  * Initializes the text.
  */
 void GameState::initText() {
-    titleText.setPosition(100, 50);
+    titleText.setPosition(100, 25);
     titleText.setFont(font);
     titleText.setCharacterSize(50);
     titleText.setFillColor(sf::Color::White);
     titleText.setString("[Minesweeper]");
 
-    numberOfBombsText.setPosition(100, 1400);
+    numberOfBombsText.setPosition(175, 1400);
     numberOfBombsText.setFont(font);
     numberOfBombsText.setCharacterSize(30);
     numberOfBombsText.setFillColor(sf::Color::White);
     numberOfBombsText.setString("Number Of Bombs: " + std::to_string(board.getNumberOfBombs()));
 
-    positionsOpenedText.setPosition(500, 1400);
+    positionsOpenedText.setPosition(575, 1400);
     positionsOpenedText.setFont(font);
     positionsOpenedText.setCharacterSize(30);
     positionsOpenedText.setFillColor(sf::Color::White);
     positionsOpenedText.setString("Positions Opened: " + std::to_string(board.getPositionsOpened()) + "/" + std::to_string(GameBoard::MAX_BOARD_POSITIONS - board.getNumberOfBombs()));
 
-    positionRemainingText.setPosition(900, 1400);
+    positionRemainingText.setPosition(975, 1400);
     positionRemainingText.setFont(font);
     positionRemainingText.setCharacterSize(30);
     positionRemainingText.setFillColor(sf::Color::White);
     positionRemainingText.setString("Positions Remaining: " + std::to_string(board.getPositionsRemaining()) + "/" + std::to_string(GameBoard::MAX_BOARD_POSITIONS - board.getNumberOfBombs()));
+
+    gameOverText.setPosition(600, 25);
+    gameOverText.setFont(font);
+    gameOverText.setCharacterSize(50);
 }
 
 /**
