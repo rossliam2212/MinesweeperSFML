@@ -47,7 +47,7 @@ GameBoard::GameBoard(GameMode gameMode) noexcept
     : mode{gameMode},
       numberOfBombs{},
       positionsOpened{},
-      positionsRemaining{MAX_BOARD_POSITIONS - numberOfBombs},
+      positionsRemaining{},
       loss{false},
       win{false},
       logger{"logs"} {
@@ -191,6 +191,7 @@ void GameBoard::placeBombsOnBoard() {
     }
 
     logger.info("Number of bombs on board: " + std::to_string(numberOfBombs) + ".", this);
+    positionsRemaining = MAX_BOARD_POSITIONS - numberOfBombs;
 
     for (int i = 0; i < numberOfBombs; ++i) {
         int randomPosition = getRandomNumber(1, 36);

@@ -47,11 +47,11 @@ target_link_libraries(MineSweeperGUI sfml-system sfml-window sfml-graphics sfml-
 
 
 # Catch2 Testing Framework
-#find_package(Catch2 3 REQUIRED)
-#
-#set(TEST_FILES)
-#set(FILES_TO_TEST ${SOURCE_FILES})
-#
-#add_executable(tests ${TEST_FILES} ${FILES_TO_TEST})
-#target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
+find_package(Catch2 3 REQUIRED)
+
+set(TEST_FILES test/gameElements/GameBoardTest.cpp)
+set(FILES_TO_TEST ${SOURCE_FILES})
+
+add_executable(tests ${TEST_FILES} ${FILES_TO_TEST})
+target_link_libraries(tests PRIVATE Catch2::Catch2WithMain sfml-system sfml-window sfml-graphics sfml-audio sfml-network)
 
