@@ -34,6 +34,7 @@ void HowToPlayMenuState::updateButtons() {
 void HowToPlayMenuState::render(sf::RenderWindow* window) {
     window->draw(background);
     window->draw(titleText);
+    window->draw(infoText);
     renderButtons(window);
 }
 
@@ -49,6 +50,37 @@ void HowToPlayMenuState::initText() {
     titleText.setCharacterSize(50);
     titleText.setFillColor(sf::Color::White);
     titleText.setString("*How To Play Minesweeper*");
+
+    infoText.setPosition(100, 400);
+    infoText.setFont(font);
+    infoText.setCharacterSize(30);
+    infoText.setFillColor(sf::Color::White);
+
+    std::ostringstream oss;
+    oss << "- When you select a game mode, that number of bombs will be added to the board.\n\n";
+
+    oss << "- When the game starts, the game board will be displayed and all the positions will be\n";
+    oss << "  covered. You must click on a position to reveal it.\n\n";
+
+    oss << "- When a position is revealed, you will either see a bomb or a number from 1 to 8.\n\n";
+
+    oss << "- If the position you reveal contains a number, this means that there are that many bombs\n";
+    oss << "  currently touching that position.\n";
+    oss << "  For example, if you reveal, this tells you that there are 3 bombs touching that position\n";
+    oss << "  and can be anywhere in the:\n";
+    oss << "  \tthree, if it's a corner,\n";
+    oss << "  \tfive, if it's a side, or\n";
+    oss << "  \teight, otherwise,\n";
+    oss << "  positions around the position you opened.\n\n";
+
+    oss << "- You must use the numbers you reveal to you advantage to navigate your way around the board.\n\n";
+
+    oss << "- If you reveal a bomb, the game is over!\n\n";
+
+    oss << "- Good Luck!";
+
+    infoText.setString(oss.str());
+
 }
 
 void HowToPlayMenuState::initBackground() {
@@ -59,7 +91,7 @@ void HowToPlayMenuState::initBackground() {
 void HowToPlayMenuState::initButtons() {
     buttons["Back"] = new Button {
             100,
-            1000,
+            1300,
             250,
             75,
             &font,

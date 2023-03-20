@@ -10,6 +10,7 @@
 #include <array>
 #include <map>
 #include <string>
+#include <sstream>
 #include <chrono>
 #include <thread>
 
