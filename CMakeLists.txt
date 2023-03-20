@@ -5,8 +5,17 @@ set(CMAKE_CXX_STANDARD 17)
 set(SOURCE_FILES
         src/core/Application.cpp
         src/core/Application.h
+
         src/core/states/State.cpp
         src/core/states/State.h
+        src/core/states/MainMenuState.cpp
+        src/core/states/MainMenuState.h
+        src/core/states/GameState.cpp
+        src/core/states/GameState.h
+
+        src/core/characters/Player.cpp
+        src/core/characters/Player.h
+
         src/utilities/logger/Color.cpp
         src/utilities/logger/Color.h
         src/utilities/logger/Formatter.cpp
@@ -19,12 +28,15 @@ set(SOURCE_FILES
         src/utilities/logger/Record.h
         src/utilities/logger/Time.cpp
         src/utilities/logger/Time.h
+
         src/utilities/input/Input.cpp
         src/utilities/input/Input.h
-        src/core/states/MainMenuState.cpp
-        src/core/states/MainMenuState.h
+
         src/ui/Button.cpp
-        src/ui/Button.h src/core/states/GameState.cpp src/core/states/GameState.h src/gameElements/GameBoard.cpp src/gameElements/GameBoard.h src/core/characters/Player.cpp src/core/characters/Player.h)
+        src/ui/Button.h
+
+        src/gameElements/GameBoard.cpp
+        src/gameElements/GameBoard.h)
 
 find_package(SFML 2.5 COMPONENTS system window graphics network audio REQUIRED) # SFML
 
